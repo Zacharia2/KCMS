@@ -8,6 +8,11 @@
 
 > 文档采用 [MKDocs](https://www.mkdocs.org/) 来编辑及部署，采用 [Material for MKDocs](https://squidfunk.github.io/mkdocs-material/) 主题。
 
+## 展示窗
+
+1. [Self-GrowthKSM：知识结构模型 ](docs\Self-GrowthKSM\自述文件.md)
+2. [浏览器书签分类](docs\浏览器书签分类.md)
+3. [Computer-Notes](docs\Computer-Notes.md)
 
 
 ## 📑 许可证
