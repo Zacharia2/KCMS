@@ -19,43 +19,43 @@ CPU：酷睿>奔腾>赛扬，凌动
 ### Dropbox（苏格子）
 
 - 00-TMP（收集箱，包含下载文件夹桌面文件夹）
-  - iterm
-  - iterm
-  - iterm
+    - iterm
+    - iterm
+    - iterm
 - 01-Resource（用到的资源）
-  - iterm
+    - iterm
 - **10-TODO**（要做的东西 | 工作台）
-  - iterm
-  - iterm
+    - iterm
+    - iterm
 - 20-Listed（已做好，需要放到其他地方的）
-  - iterm
-  - iterm
+    - iterm
+    - iterm
 - 21-Sandox（保存这台电脑上）
-  - 01-Favorite
-  - 10-Picture
-  - 20-Doc
-  - 30-Mov
-  - Calibre书库（图书馆、失落的空间）
-  - OneNote 笔记本
+    - 01-Favorite
+    - 10-Picture
+    - 20-Doc
+    - 30-Mov
+    - Calibre书库（图书馆、失落的空间）
+    - OneNote 笔记本
 
 ### Software
 
 - 用户软件安装位置
 - Scoop（命令行软件）
 - Z_Extended（Z_Extended 描述）
-  - AAA111-ZIP（暂时不用的绿色软件）
-  - 正在使用的。
+    - AAA111-ZIP（暂时不用的绿色软件）
+    - 正在使用的。
 - Z_Linkages（扩展软件快捷方式）
-  - Link
+    - Link
 - Z_mGames（我的游戏）
 - Z_SoFM_Files（软件临时文件）
-  - AppStore
-  - SoundFile.SLL
-  - NetDisk
-  - NetEase
-  - OneNote_CT
-  - TencentMsg
-  - Renderings
+    - AppStore
+    - SoundFile.SLL
+    - NetDisk
+    - NetEase
+    - OneNote_CT
+    - TencentMsg
+    - Renderings
 
 
 
