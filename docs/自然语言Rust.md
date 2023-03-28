@@ -53,7 +53,8 @@
 
 ### 所有权
 
-> 所有者 = 从属对象，，赋值为，绑定为。
+> **所有者 = 从属对象，，赋值为，绑定为。**
+> 
 > 将数值 5 绑定到 x
 
 
@@ -62,15 +63,17 @@ let x = 5;  //令 x 绑定5
 let y = &x;  //令 y 绑定 借用的x
 assert_eq!(5, x);
 assert_eq!(5, *y);  //断言相等 5，解引用y
+
+let a = "hello world"; //令 a 绑定为 hello world
+let mut x = 5; //令 可变的 x 绑定为 5。
+x = 6; //x 修改为 6
+let (a, mut b): (bool,bool) = (true, false);  //令  元组a可变的b，类型是 布尔，布尔，匹配被绑定元组值真，假。
 ```
 
-```rust
-let a = "hello world"，令 a 绑定为 hello world
-let mut x = 5; 令 可变的 x 绑定为 5。
 var a = "hello world"， a 赋值为 hello world。
-x = 6;，x 修改为 6
-let (a, mut b): (bool,bool) = (true, false);，令  元组a可变的b，类型是 布尔，布尔，匹配被绑定元组值真，假。
-```
+
+
+
 
 
 ### 解构
@@ -102,9 +105,7 @@ let one = x.2;
 
 ```
 
-
-
-可变引用需要使所有者修饰为可变的。同一作用域，特定数据只能有一个可变引用：
+> 可变引用需要使所有者修饰为可变的。同一作用域，特定数据只能有一个可变引用：
 
 
 `fn greet(name: String)，方法 green 参数name类型（冒号说明） string`
@@ -120,7 +121,7 @@ let (s2, len) = calculate_length(s1);，令 元组 s2 len 绑定 calculate_lengt
 ```
 
 
-**takes_ownership(s); 调用函数并移动（无copy特性，移动到函数中。）或Copy s 的值到函数里。如果一个类型拥有 Copy 特征，一个旧的变量在被赋值给其他变量后仍然可用。**
+takes_ownership(s); 调用函数并移动（无copy特性，移动到函数中。）或Copy s 的值到函数里。如果一个类型拥有 Copy 特征，一个旧的变量在被赋值给其他变量后仍然可用。
 
 > 实现了 Copy 特征的类型无需所有权转移，可以直接在赋值时进行 数据拷贝
 
@@ -130,13 +131,10 @@ let (s2, len) = calculate_length(s1);，令 元组 s2 len 绑定 calculate_lengt
 
 > 结构体，元组结构体，单元结构体（仅有结构体 名称）
 
-一个结构体由几部分组成:
-
-1. 通过关键字 struct 定义
-2. 一个清晰明确的结构体 名称
-3. 几个有名字的结构体 字段
+一个结构体由几部分组成：通过关键字 `struct 定义`、一个清晰明确的`结构体 名称`、几个有名字的`结构体 字段`
 
 ```rust
+// 设 结构 User，其中 active 字段类型为 布尔，username类型为String。。。
 struct User {
     active: bool,
     username: String,
@@ -145,29 +143,28 @@ struct User {
 }
 ```
 
-**设 结构 User，其中 active 字段类型为 布尔，username类型为String。。。**
+
 
 ```rust
+// 令 user1 绑定 User 结构体，其中，email字段值为String::from("someone@example.com"),。。
 let user1 = User {
     email: String::from("someone@example.com"),
 ```
 
-**令 user1 绑定 User 结构体，其中，email字段值为String::from("someone@example.com"),。。**
+
 
 ```rust
+// 令 user2 绑定 User结构体，（省略），更新自user1结构体。
 let user2 = User {
     email: String::from("another@example.com"),
     ..user1  //结构体更新语法 ..user1
 ```
 
-**令 user2 绑定 User结构体，（省略），更新自user1结构体。**
-
-
 
 ### 枚举
 
 ```rust
-
+// 设 枚举 PokerCard 定义成员，Clubs类型为u8，，，Hearts 类型为u8。
 enum PokerCard {
     Clubs(u8),
     Spades(u8),
@@ -176,31 +173,27 @@ enum PokerCard {
 }
 
 fn main() {
+    // 令 c1 绑定 PokerCard枚举的Spades成员，关联 5
    let c1 = PokerCard::Spades(5);
    let c2 = PokerCard::Diamonds(13);
 }
 
 ```
 
-**设 枚举 PokerCard 定义成员，Clubs类型为u8，，，Hearts 类型为u8。**
-
-**设 枚举 PokerCard 定义成员 xx，xx。**
-
-**令 c1 绑定 PokerCard枚举中的Spades成员，关联 5**
-
 
 ### 定长数组和不定长数组
 
 ```rust
+// 令 a 绑定 数组[1, 2, 3, 4, 5];
 let a = [1, 2, 3, 4, 5];
 
-令 a 绑定 数组[1, 2, 3, 4, 5];
 
+// 令 a 类型为数组其中元素类型 i32 数组长度5（[类型; 长度]） 绑定 数组[1, 2, 3, 4, 5];
 let a: [i32; 5] = [1, 2, 3, 4, 5];
 
-令 a 类型为数组其中元素类型 i32 数组长度5（[类型; 长度]） 绑定 数组[1, 2, 3, 4, 5];
 
-let a = [3; 5]; 令 a 绑定 数组 其值为3，重复5次。（copy特性）
+// 令 a 绑定 数组 其值为3，重复5次。（copy特性）
+let a = [3; 5]; 
 ```
 
 
@@ -208,6 +201,17 @@ let a = [3; 5]; 令 a 绑定 数组 其值为3，重复5次。（copy特性）
 ### 循环体
 
 > for iterating_var in sequence：对于var元素在集合（序列）中
+>
+> loop 环，环路;  
+> loop 是一个表达式，因此可以返回一个值.
+> 
+> break 可以单独使用，也可以带一个返回值，有些类似 return
+
+
+```rust
+// A.迭代().列举()
+a.iter().enumerate() 
+```
 
 ```rust
 for i in 1..=5 {
@@ -222,7 +226,6 @@ for item in &container {
 
 
 
-
 > while （condition）当 条件怎样时
 
 ```rust
@@ -234,54 +237,45 @@ while n <= 5  {
 ```
 
 
-loop 环，环路
-
-break 可以单独使用，也可以带一个返回值，有些类似 return
-loop 是一个表达式，因此可以返回一个值
-
-
-`a.iter().enumerate() A. 迭代(). 列举()`
-
 
 ### 匹配模式
+
+> 把模式（pattern）看作正则表达式就好理解多了。
+
+
+1. 一次匹配match
+2. 多次匹配if let
+
 
 ```rust
 
 match target {
+    // match 的分支。一个分支有两个部分：一个模式和针对该模式的处理代码
     模式1 => 表达式1,
     模式2 => {
         语句1;
         语句2;
         表达式2
     },
+    // 单分支多模式：a | b 或者 1..=5序列。
     _ => 表达式3
 }
 
 ```
 
-match 的分支。一个分支有两个部分：一个模式和针对该模式的处理代码
+匹配绑定。
+
+####  match 中的变量覆盖
 
 
-**一次匹配match与多次匹配if let**
-
-
-**match 中的变量覆盖**其实不是那么的容易看出，要小心。其原因是match块或分支中的同名变量是新变量。
+match 中的变量覆盖其实不是那么的容易看出，要小心。其原因是match块或分支中的同名变量是新变量。
 
 > 变量遮蔽，一个是在同一作用域使用let =  ，另一种是在子作用域使用let =，作用范围仅限该作用域。
 
 
-把模式（pattern）看作正则表达式就好理解多了。
-
-
-**匹配的单分支多模式** a | b 或者 1..=5序列。
+**函数调用可以用数学视角视作，a f(a)**
 
 
 解构即：已知原有的结构，用含有具体变量的结构解析式表达该结构；也可以使用模式来解构结构体、枚举、元组、数组和引用。这种将复杂类型分解匹配的方式，可以让我们单独得到感兴趣的某个值。
-
-
-匹配绑定。
-
-
-**函数调用可以用数学视角视作，a f(a)**
 
 在 Rust 中，解构是一种将复合数据类型（如元组、结构体、枚举等）拆分为其组成部分的方法。解构可以将一个复合数据类型的元素或字段赋值到单独的变量中，这样我们可以更方便地访问和操作数据。
