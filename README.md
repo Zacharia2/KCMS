@@ -8,13 +8,6 @@
 
 
 
-## 前言
-
-> 工欲善其事，必先利其器。 ———《论语·卫灵公》
-
-> 文档采用 [MKDocs](https://www.mkdocs.org/) 来编辑及部署，采用 [Material for MKDocs](https://squidfunk.github.io/mkdocs-material/) 主题。
-
-
 
 ## “当我想找一篇文章，它一定在这里。”
 
