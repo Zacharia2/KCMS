@@ -9,9 +9,3 @@ aliases: [AI, Artificial Intelligence]
 def:public this super [[基本]]，[[Other]] has [B, C, D] cite [[元素]] throw [Super向上回溯(限定范围)/Any子元素(具体处理)]
 keys:标签。相似（线索：近义词、同义词、反义词等等）
 ```
-
-
-- 通过语义空间，我大概可以实现网状结构和树状结构。
-- 通过语义空间，我可以使用搜索功能检索到任何类别的元素，包括访问权限、深度Depth=1的检索等等。
-- 通过keys，我可以大概摘要出文件内容与启发性词汇
-- 通过四种抽象，可以演化出丰富性与多样性。
