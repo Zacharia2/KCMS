@@ -283,3 +283,203 @@ match 中的变量覆盖其实不是那么的容易看出，要小心。其原�
 解构即：已知原有的结构，用含有具体变量的结构解析式表达该结构；也可以使用模式来解构结构体、枚举、元组、数组和引用。这种将复杂类型分解匹配的方式，可以让我们单独得到感兴趣的某个值。
 
 在 Rust 中，解构是一种将复合数据类型（如元组、结构体、枚举等）拆分为其组成部分的方法。解构可以将一个复合数据类型的元素或字段赋值到单独的变量中，这样我们可以更方便地访问和操作数据。
+
+
+```rust
+struct Circle {
+    x: f64,
+    y: f64,
+    radius: f64,
+}
+
+impl Circle {
+    // new是Circle的关联函数，因为它的第一个参数不是self，且new并不是关键字
+    // 这种方法往往用于初始化当前结构体的实例
+    fn new(x: f64, y: f64, radius: f64) -> Circle {
+        Circle {
+            x: x,
+            y: y,
+            radius: radius,
+        }
+    }
+
+    // Circle的方法，&self表示借用当前的Circle结构体
+    fn area(&self) -> f64 {
+        std::f64::consts::PI * (self.radius * self.radius)
+    }
+}
+
+```
+
+impl Rectangle {} 表示为 Rectangle 实现方法(impl 是实现 implementation 的缩写)，这样的写法表明 impl 语句块中的一切都是跟 Rectangle 相关联的。
+
+
+impl 实现。impl Circle 实现 Circle 结构。
+
+fn new(x: f64, y: f64, radius: f64) -> Circle
+方法 new 参数  x 类型 f64，y类型f64，radius类型f64 返回值类型Circle结构。
+
+---
+
+```rust
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+```
+
+在 area 的签名中，我们使用
+-  &self 替代 rectangle: &Rectangle，&self 其实是 self: &Self 的简写（注意大小写）。
+- 在一个 impl 块内，Self 指代被实现方法的结构体类型，self 指代此类型的实例，
+
+
+- 换句话说，self 指代的是 Rectangle 结构体实例，这样的写法会让我们的代码简洁很多，而且非常便于理解：我们为哪个结构体实现方法，那么 self 就是指代哪个结构体的实例。
+
+需要注意的是，self 依然有所有权的概念：
+
+- self 表示 Rectangle 的所有权转移到该方法中，这种形式用的较少
+- &self 表示该方法对 Rectangle 的不可变借用
+- &mut self 表示可变借用
+
+总之，self 的使用就跟函数参数一样，要严格遵守 Rust 的所有权规则。
+
+
+&self  
+  - rectangle : &Rectangle 
+  - self （实例）: &Self （类型）
+
+
+定义在 impl 中且没有 self 的函数被称之为**关联函数**
+
+---
+
+关联函数与实例方法
+
+关联于某个类型，所以使用这种方式，String::from()
+方法：无法独立调用，必须先有类型的实例，再有方法。比如f.read()等。
+
+除了结构体和枚举，我们还能为特征(trait)实现方法
+
+---
+
+泛型：用同一功能的函数处理不同类型的数据，例如两个数的加法，无论是整数还是浮点数，甚至是自定义类型，都能进行支持。
+
+“通用的炮管”就是多态
+
+实际上，泛型就是一种多态。
+
+
+方法中使用泛型
+
+```rs
+impl<T> Point<T> {
+    fn x(&self) -> &T {
+        &self.x
+    }
+}
+```
+
+```rs
+fn display_array<T: std::fmt::Debug, const N: usize>(arr: [T; N]) {
+    println!("{:?}", arr);
+}
+fn main() {
+    let arr: [i32; 3] = [1, 2, 3];
+    display_array(arr);
+
+    let arr: [i32; 2] = [1, 2];
+    display_array(arr);
+}
+```
+
+
+泛型约束的后置型
+
+```rs
+fn f1<T>(v:T) -> i32
+  where T:Add { // 左边就是泛型约束了
+  // ...
+}
+
+pub enum Assert<const CHECK: bool> {
+    //
+}
+```
+
+---
+
+
+特征：是一组方法。抽象至不同的类中的相同行为。
+
+```rs
+impl Summary for Post {
+    fn summarize(&self) -> String {
+        format!("文章{}, 作者是{}", self.title, self.author)
+    }
+}
+```
+
+实现特征的语法与为结构体、枚举实现方法很像：impl Summary for Post，读作“为 Post 类型实现 Summary 特征”，然后在 impl 的花括号中实现该特征的具体方法。
+
+
+
+
+```rs
+pub trait Summary {
+    fn summarize(&self) -> String;
+}
+```
+
+公开 特征 Summary ，函数 summarize 借用实例 返回值类型 String。
+
+
+---
+
+
+函数签名（Function Signature）是指函数的定义或声明中包含的信息，包括函数名、参数列表和返回值类型。函数签名可以用来区分不同的函数，并在调用函数时检查参数类型和数量的正确性。
+
+---
+
+如果你想要为类型 A 实现特征 T，那么 A 或者 T 至少有一个是在当前作用域中定义的！
+
+
+```rs
+pub fn notify(item: &impl Summary) {
+    println!("Breaking news! {}", item.summarize());
+}
+```
+
+
+实现了Summary特征 的 item 参数。
+
+
+你可以使用任何实现了 Summary 特征的类型作为该函数的参数，同时在函数体内，还可以调用该特征的方法，例如 summarize 方法。具体的说，可以传递 Post 或 Weibo 的实例来作为参数，而其它类如 String 或者 i32 的类型则不能用做该函数的参数，因为它们没有实现 Summary 特征。
+
+
+
+---
+
+"where" 在 Rust 中是一个关键字，用于指定泛型参数的 trait 约束。可以理解为约束（constraint）。
+
+全部,哪里,在哪里,在那里,到哪里,处于哪种情形,地点,…的地方,…情况下,何地,何处,什么地方
+
+在 Rust 中，我们有一个使用 where 子句表示的边界概念。子句适用于任意类型以及类型参数。
+
+
+----
+
+特征约束不就是约束嘛和泛型约束差不多，只不过换成了特征。
+
+----
+
+
+dyn是trait对象类型的前缀，dyn 关键字只用在特征对象的类型声明上，在创建时无需使用 dyn。
+
+解引用操作符*，`*self`，Deref Trait
+
+特征对象指向实现了 Draw 特征的类型的实例，也就是指向了 Button 或者 SelectBox 的实例，这种映射关系是存储在一张表中，可以在运行时通过特征对象找到具体调用的类型方法。
+
+可以通过 & 引用或者 Box<T> 智能指针的方式来创建特征对象。
+
+----
