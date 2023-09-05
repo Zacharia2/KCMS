@@ -204,7 +204,7 @@ let a = [3; 5];
 
 ### 循环体
 
-> for iterating_var in sequence：对于var元素在集合（序列）中
+> for iterating_var in sequence：对 var元素 在 集合（序列）s
 >
 > loop 环，环路;  
 > loop 是一个表达式，因此可以返回一个值.
@@ -219,7 +219,7 @@ a.iter().enumerate()
 
 ```rust
 for i in 1..=5 {
-// 对于 i 在1至5序列中。
+// 对 i 在 序列1至5
         println!("{}", i);
     }
 
