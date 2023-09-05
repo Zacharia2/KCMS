@@ -1,4 +1,4 @@
-# Self-GrowthKSM
+# GrowthK2S
 
 > 仅包含如何组织与管理笔记页。（数据结构与方法）
 
@@ -6,7 +6,7 @@
 
 基础设施、可用语义空间。
 
-Self-GrowthKSM = Nt(D) + Org + Func + Defect
+GrowthK2S = Nt(D) + Org + Func + Defect
 
 D = f(s) //相关域D，s强度（Strength）
 
