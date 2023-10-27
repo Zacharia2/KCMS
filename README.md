@@ -1,13 +1,10 @@
-# 元规则Wiki
+# 元序列笔记 和 GrowthK2S树图结构
 
 > 元数据根序列笔记，借鉴Linux的根目录概念。归纳整理所有笔记的元信息或规则。
 >
 > 分离内容和架构。
 >
 > 面向内容，分离数据和软件，不把内容当处理对象的研究软件都是玩软件和新鲜感罢了。
-
-
-
 
 ## “当我想找一篇文章，它一定在这里。”
 
@@ -29,12 +26,10 @@
 
 2. 剪藏&创作，使用是否为自己书写简单区分为这两类。
 
-
 ## 多样性
 
 1. 概念专用名词解释
 2. 说明文。
-
 
 ## 盖尔定律
 
@@ -61,8 +56,6 @@
 **元知识**（英语：metaknowledge）是关于描述、使用一般[知识](https://zh.wikipedia.org/wiki/知识)的知识[[1]](https://zh.wikipedia.org/wiki/元知识#cite_note-陈-1)。元知识常被宽泛地依照字面意思称为“关于知识的知识”。
 
 **元对象**（metaobject）是操纵、创建、描述或实现对象（包括自身）的[对象](https://zh.wikipedia.org/wiki/对象_(计算机科学))。适用于元对象的对象叫做基础对象。元对象可以定义的一些信息包括：基础对象的[类型](https://zh.wikipedia.org/wiki/类型系统)、[接口](https://zh.wikipedia.org/wiki/接口_(计算机科学))、[类](https://zh.wikipedia.org/wiki/类_(计算机科学))、[方法](https://zh.wikipedia.org/wiki/方法_(计算机科学))、[特性](https://zh.wikipedia.org/wiki/特性_(计算机科学))、[解析树](https://zh.wikipedia.org/wiki/解析树)等。元对象是计算机科学[反射](https://zh.wikipedia.org/wiki/反射_(计算机科学))概念的例子，这里的系统（通常在运行时间）能访问它自己的内部结构。反射在根本上确使一个系统能现场重写自身，在其运行时改变自己的实现。
-
-
 
 ## 许可证
 
