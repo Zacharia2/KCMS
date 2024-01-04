@@ -6,7 +6,7 @@
 
 ## [树图知识结构](./GrowthK2S/README.md)
 
-![[c6341a3b82cbba841ff6d1bf3a5074d9.jpg]]
+![tree](./Attachment/c6341a3b82cbba841ff6d1bf3a5074d9.jpg)
 
 根到叶子和节点的路径、全部叶子和节点 就是 所有的文件（笔记、元素）、叶子（节点）之间的连接就是图或者别的数据结构。
 
