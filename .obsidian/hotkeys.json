@@ -1,1 +1,10 @@
-{}
+{
+  "clever-search:clever-search-in-vault": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "S"
+    }
+  ]
+}
