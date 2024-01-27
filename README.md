@@ -8,6 +8,8 @@
 
 ![tree](./Attachment/c6341a3b82cbba841ff6d1bf3a5074d9.jpg)
 
+Zettelkasten(Slip-box)，太厉害了，我这个小玩具根本比不上。
+
 树 = 层级结构 = 层级列表（嵌套列表）
 
 树结构是最简单实用的存储方式。星系、行政地图。用树去承载图是一个好想法
