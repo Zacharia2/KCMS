@@ -1,3 +1,7 @@
+## 检索类
+- Path Finder：查找两个节点之间的所有路径并将其渲染为图形或文本的插件。
+- clever search
+## 增强类
 - Homepage
 - Image Toolkit
 - mousewheel image zoom
