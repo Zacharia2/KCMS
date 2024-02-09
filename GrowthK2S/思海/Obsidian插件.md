@@ -13,3 +13,5 @@
 - Customizable Page Header and Title Bar
 - Copy Button for code blocks（复制代码块按钮）
 - Excalidraw
+
+鼠标中键可以，每次打开文件的时候按住ctrl
