@@ -2,5 +2,7 @@
   "attachmentFolderPath": "Attachment",
   "alwaysUpdateLinks": true,
   "readableLineLength": true,
-  "foldHeading": true
+  "foldHeading": true,
+  "useTab": true,
+  "tabSize": 2
 }

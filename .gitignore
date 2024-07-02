@@ -1,2 +1,12 @@
-
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/workspace-mobile.json
+.obsidian/types.json
+.obsidian/page-preview.json
 .obsidian/graph.json
+
+# 忽略插件临时文件
+.obsidian/plugins/recent-files-obsidian/data.json
+# 忽略自动生成的目录
+.vscode
+.stversions/*
