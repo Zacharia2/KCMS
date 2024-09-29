@@ -115,7 +115,7 @@
 					- Weak
 					- Approx
 					- Opp
-				- Calc
+				- Expr
 	- Page
 		- Comment
 
