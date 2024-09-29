@@ -4,5 +4,27 @@
   "readableLineLength": true,
   "foldHeading": true,
   "useTab": true,
-  "tabSize": 2
+  "tabSize": 2,
+  "mobileToolbarCommands": [
+    "editor:set-heading",
+    "editor:toggle-bold",
+    "editor:toggle-italics",
+    "editor:toggle-strikethrough",
+    "editor:insert-wikilink",
+    "editor:toggle-numbered-list",
+    "editor:toggle-bullet-list",
+    "editor:indent-list",
+    "editor:unindent-list",
+    "editor:toggle-checklist-status",
+    "editor:toggle-code",
+    "editor:undo",
+    "editor:redo",
+    "editor:toggle-blockquote",
+    "editor:toggle-highlight",
+    "editor:insert-link",
+    "editor:insert-embed",
+    "editor:insert-tag",
+    "editor:attach-file",
+    "editor:configure-toolbar"
+  ]
 }
