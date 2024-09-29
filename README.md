@@ -18,7 +18,7 @@
 
 ## 知识组织结构
 
-![tree](c6341a3b82cbba841ff6d1bf3a5074d9.jpg)
+![tree](./Attachment/c6341a3b82cbba841ff6d1bf3a5074d9.jpg)
 
 知识组织的拓扑结构：==0 孤立点，1 列表，2 矩阵，3 树，4 图，4.5 语义网，5 超图==。其中语义网包含逻辑结构，非结构化笔记，非关系型数据库。描述从简单的孤立笔记结构逐渐发展为最复杂的超图笔记结构的过程。
 
@@ -75,6 +75,49 @@
 站在数据结构与算法的角度看待笔记：
 
 数据结构（变量，记忆，笔记）由算法（行为，方法，用户）去整理推演，最后解决需要和预期。
+
+## [系统架构](./KMS/孵化器/定义/004系统架构)
+
+- Sys
+	- Ink
+		- Acc
+			- Pub
+			- Mut
+		- Store
+		- Priority
+		- Type[Any, Create]
+			- Set
+				- Concept
+				- Mapping
+					- Case
+					- List
+					- Redirect
+					- Moc
+					- Graph
+				- Term+[areas]
+				- Task
+		- Edge
+			- Unto
+			- Const
+			- Cite
+			- Seq
+				- Time
+				- Hist
+			- As
+				- As
+				- Alias
+			- Sa
+				- Abstract
+				- Impl
+				- Meld
+				- Disint
+				- Rel
+					- Weak
+					- Approx
+					- Opp
+				- Calc
+	- Page
+		- Comment
 
 ## “当我想找一篇文章，它一定在这里。”
 
