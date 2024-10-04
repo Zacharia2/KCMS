@@ -83,40 +83,40 @@
 		- Acc
 			- Pub
 			- Mut
-		- Store
 		- Priority
+		- Store
 		- Type[Any, Create]
 			- Set
 				- Concept
-				- Mapping
+					- Topic
+				- Map+
 					- Case
 					- List
 					- Redirect
 					- Moc
 					- Graph
-				- Term+[areas]
 				- Task
 		- Edge
 			- Unto
 			- Cite
-			- Seq
+			- Alias
+			- Seq+
 				- Time
 				- Hist
-			- Alias
 			- Sa
 				- Abstract
 				- Impl
 				- Meld
 				- Disint
-				- Rel
+				- Rel+
 					- Assoc
-					- As
 					- Approx
 					- Opp
 				- Expr
 				- Const
 	- Page
 		- Comment
+		- Reference
 
 ## “当我想找一篇文章，它一定在这里。”
 
