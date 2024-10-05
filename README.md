@@ -103,16 +103,15 @@
 			- Seq+
 				- Time
 				- Hist
-			- Sa
+			- Rel+
+				- Assoc
+				- Approx
+				- Opp
+			- Expr
 				- Abstract
 				- Impl
 				- Meld
 				- Disint
-				- Rel+
-					- Assoc
-					- Approx
-					- Opp
-				- Expr
 				- Const
 	- Page
 		- Comment
