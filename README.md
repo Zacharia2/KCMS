@@ -85,9 +85,13 @@
 		- Type[Any, Create]
 			- Set
 				- Concept
-				- Topic
 				- Map+
 					- Case
+					- Rel
+						- Link
+						- Diff
+						- Inf
+						- Appl
 					- List
 						- Keyword
 					- Redirect
@@ -95,6 +99,7 @@
 						- Set
 						- Topic
 					- Graph
+				- Topic
 				- Task
 		- Edge
 			- Unto
