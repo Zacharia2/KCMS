@@ -1,7 +1,7 @@
 {
   "attachmentFolderPath": "Attachment",
   "alwaysUpdateLinks": true,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "foldHeading": true,
   "useTab": true,
   "tabSize": 2,
@@ -26,5 +26,6 @@
     "editor:insert-tag",
     "editor:attach-file",
     "editor:configure-toolbar"
-  ]
+  ],
+  "propertiesInDocument": "visible"
 }
