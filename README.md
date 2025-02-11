@@ -89,25 +89,18 @@ Insight 启发，洞见
 			- Mut
 		- Priority
 		- Block
-		- Type[Any, Create]
-			- Set
-				- Concept
-				- Map+
-					- Case
-					- Rel
-						- Link
-						- Diff
-						- Inf
-						- Appl
-					- List
-						- Keyword
-					- Redirect
-					- Moc
-						- Set
-						- Topic
-					- Graph
-				- Topic
-				- Task
+		- Type[Any, Create, Set]
+			- Concept
+			- Map+
+				- Moc
+					- Topic
+				- List
+					- Word
+				- Graph
+				- Case
+				- Redirect
+			- Topic
+			- Task
 		- Edge
 			- Unto
 			- Cite
@@ -145,8 +138,6 @@ Insight 启发，洞见
 ## 正文
 
 1. 分而治之：将每个软件都纳入工作流程的一部分，每一个软件承担各种的流程。收集的软件就承担收集工作，整理软件就承担整理工作。整理软件就承担整理工作。
-   小米笔记（时间序列）、印象笔记（同步） 、 OneNote 、 obsidian、Tiddlywiki。
-
 2. 剪藏&创作，使用是否为自己书写简单区分为这两类。
 
 ## 多样性
