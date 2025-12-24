@@ -10,3 +10,6 @@
 # 忽略自动生成的目录
 .vscode
 .stversions/*
+.obsidian/plugins/node_modules
+.obsidian/plugins/infinite-file-tree
+.obsidian/plugins/forest-obsidian
